@@ -1,7 +1,7 @@
 <p id="notice"></p>
 <% if @book.errors.any? %>
   <div id="error_explanation" class="alert alert-danger">
-    <h2><%= @book.errors.count %> errors prohibited this book from being saved:</h2>
+    <h2><%= @book.errors.count %>Save failed due to an error.</h2>
     <ul>
       <% @book.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -13,15 +13,15 @@
   <div class="col-md-6 col-md-offset-3">
     <h1>Editing Book</h1>
     <%= form_for(@book) do |f| %>
-      <div class="field row">
-        <label for="book_title">Title</label>
+      <div class="field">
+        <label for="book_title">Title</label><br>
         <%= f.text_field :title, class:"col-xs-12 book_title" %>
       </div>
-      <div class="field row">
-        <label for="book_opinion">Opinion</label>
+      <div class="field">
+        <label for="book_opinion">Opinion</label><br>
         <%= f.text_area :body, class:"col-xs-12 book_body" %>
       </div>
-      <div class="actions row">
+      <div class="actions">
         <%= f.submit 'Update Book', class:"btn btn-primary col-xs-12" %>
       </div>
     <% end %>

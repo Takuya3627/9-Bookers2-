@@ -21,61 +21,65 @@ body {
   line-height: 18px;
   margin: 33px;
 }
-p,
-ol,
-ul,
-td {
+
+p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
   margin: 33px;
 }
+
 pre {
   background-color: #eee;
   padding: 10px;
   font-size: 11px;
 }
+
 a {
   color: #000;
 }
-a:visited {
-  color: #666;
-}
-a:hover {
-  color: #fff;
-  background-color: #000;
-}
+
 th {
   padding-bottom: 5px;
 }
+
 td {
   padding-bottom: 7px;
   padding-left: 5px;
   padding-right: 5px;
 }
+
 div.field,
 div.actions {
   margin-bottom: 10px;
 }
+
 #notice {
   color: green;
 }
+
 #error_explanation {
   color: red;
 }
-label {
-  display: block;
-}
+
 header {
   color: white;
 }
+
 header .navbar-left span {
   font-size: 20px;
   padding-top: 10px;
 }
+
 .body {
   margin-top: 51px;
 }
+
 .title{
   line-height: 50px;
+  color: white;
 }
+
+@import "bootstrap";
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
