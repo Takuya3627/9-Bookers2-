@@ -1,7 +1,7 @@
 <p id="notice"></p>
 <% if @book_new.errors.any? %>
   <div id="error_explanation" class="alert alert-danger">
-    <h2><%= @book_new.errors.count %>Save failed due to an error.</h2>
+    <h2><%= @book_new.errors.count %>errors prohibited this obj from being saved:</h2>
     <ul>
       <% @book_new.errors.full_messages.each do |message| %>
         <li><%= message %></li>

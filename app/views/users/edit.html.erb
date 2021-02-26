@@ -1,7 +1,9 @@
+ <div class='row'>
+    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
 <h2>User info</h2>
 <% if @user.errors.any? %>
   <div id="error_explanation" class="alert alert-danger">
-  <h2><%= @user.errors.count %> errors prohibited this user from being saved:</h2>
+  <h2><%= @user.errors.count %>errors prohibited this user from being saved:</h2>
     <ul>
       <% @user.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -11,18 +13,20 @@
 <% end %>
 <%= form_for(@user) do |f| %>
   <div class="field">
-    <label for="user_name">Name</label>
+    <label for="user_name">Name</label><br>
     <%= f.text_field :name, autofocus: true, class:"name", placeholder:"name"%>
   </div>
   <div class="field">
-    <label for="user_image">Image</label>
+    <label for="user_image">Image</label><br>
     <%= f.attachment_field :profile_image, placeholder: "Profile Image", class: "user-edit-form" %>
   </div>
   <div class="field">
-    <label for="user_introduction">Introduction</label>
+    <label for="user_introduction">Introduction</label><br>
     <%= f.text_area :introduction, class:"user_body introduction", id:"user_introduction" %>
   </div>
   <div class="actions">
-    <%= f.submit "Update User", class:"btn btn-primary" %>
+    <%= f.submit "Update User", class:"btn btn-secondary" %>
   </div>
+  </div>
+</div>
 <% end %>
